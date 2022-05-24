@@ -1,0 +1,21 @@
+@import "../../styles/breakpoints.scss";
+body {
+	background: black;
+	color: white;
+}
+
+main#page-wrapper {
+	max-width: $desktop;
+	margin: 0 auto;
+}
+h1, h2, h3 {
+	text-transform: uppercase;
+}
+section {
+	padding: 4rem;
+}
+@media (max-width: $tablet){
+	section {
+		padding: 2rem;
+	}
+}

@@ -1,0 +1,29 @@
+@import "../../styles/colors.scss";
+header#site-header {
+	padding: 2rem 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 100%;
+	.logo {
+		display: flex;
+		padding: 1rem;
+		.circle {
+			display: block;
+			height: 31px;
+			width: 31px;
+			border-radius: 50%;
+			background: white;
+			filter:saturate(70%);
+			&:first-of-type {
+				background: $red;
+			}
+			&:nth-of-type(2) {
+				background: $blue;
+			}
+			&:nth-of-type(3) {
+				background: $yellow;
+			}
+		}
+	}
+}

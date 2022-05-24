@@ -1,0 +1,38 @@
+@import "./reset.scss";
+@import "./breakpoints.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;1,400;1,500&family=Rubik+Mono+One&family=Rubik:wght@600;700;800&display=swap');
+
+// Font-sizing and families
+body {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 1em;
+}
+h1 {
+	font-size: 4rem;
+	font-weight: 800;
+}
+h2 {
+	font-size: 3rem;
+	font-weight: 700;
+}
+h3 {
+	font-size: 2.1rem;
+	font-weight: 600
+}
+h4 {
+	font-size: 1.8rem;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Rubik', sans-serif;
+	margin-bottom: 1rem;
+}
+p {
+	max-width: 70ch;
+	margin-bottom: 1.2rem;
+}
+
+@media (max-width: $phone){
+	h1 {
+		font-size: 2.7rem;
+	}
+}
