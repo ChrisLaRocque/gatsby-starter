@@ -1,0 +1,37 @@
+section#cards {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+  gap: 10px;
+	.text {
+		padding: 2rem;
+		p {
+			max-width: 40ch;
+		}
+	}
+	.cards {
+		display: flex;
+		overflow-x: scroll;
+		align-items: stretch;
+		.card {
+			position: relative;
+			min-width:45%;
+			border-radius: 17px;
+			overflow: hidden;
+			z-index: 2;
+			.card-text {
+				padding: 3rem;
+				background: #000;
+			}
+			.card-image {
+
+			}
+			&:not(:first-of-type) {
+				margin-left: -100px;
+				z-index: 0;
+			}
+			&:hover {
+				z-index: 2;
+			}
+		}
+	}
+}

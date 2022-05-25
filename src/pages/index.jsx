@@ -3,6 +3,8 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout/Layout";
 import Hero from "../components/Hero/Hero";
 import TextAnimSplit from "../components/TextAnimSplit/TextAnimSplit";
+import Video from "../components/Video/Video";
+import Cards from "../components/Cards/Cards";
 
 export default function IndexPage({ data, location }) {
   const images = data.allUnsplashImage.edges.map(({ node }) => node);
@@ -17,7 +19,7 @@ export default function IndexPage({ data, location }) {
   return (
     <Layout
       seoInfo={{
-        location: location,
+        location,
         title: "Chris LaRocque Gatsby starter",
         description: "Gatsby starter with things working how I like.",
         image: heroImage.urls.regular,
@@ -47,12 +49,62 @@ export default function IndexPage({ data, location }) {
           { to: "/", text: "Learn morer" },
         ]}
       />
-      <section>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h4>Heading 4</h4>
-        <p></p>
-      </section>
+      <Video videoId="fC_q9KPczAg" />
+      <Cards
+        headline="Gatsby starter"
+        body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel deserunt ratione non rem, nostrum exercitationem, eum, veniam recusandae"
+        cards={[
+          {
+            headline: "Card 1",
+            body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel deserunt ratione non rem, nostrum exercitationem, eum, veniam recusandae",
+            button: {
+              to: "/",
+              text: "Learn More",
+            },
+            image: images[randomIntFromInterval(0, 19)],
+          },
+          {
+            headline: "Card 2",
+            body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel deserunt ratione non rem, nostrum exercitationem, eum, veniam recusandae",
+            button: {
+              to: "/",
+              text: "Learn More",
+            },
+            image: images[randomIntFromInterval(0, 19)],
+          },
+          {
+            headline: "Card 3",
+            body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel deserunt ratione non rem, nostrum exercitationem, eum, veniam recusandae",
+            button: {
+              to: "/",
+              text: "Learn More",
+            },
+            image: images[randomIntFromInterval(0, 19)],
+          },
+          {
+            headline: "Card 4",
+            body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel deserunt ratione non rem, nostrum exercitationem, eum, veniam recusandae",
+            button: {
+              to: "/",
+              text: "Learn More",
+            },
+            image: images[randomIntFromInterval(0, 19)],
+          },
+          {
+            headline: "Card 5",
+            body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel deserunt ratione non rem, nostrum exercitationem, eum, veniam recusandae",
+            button: {
+              to: "/",
+              text: "Learn More",
+            },
+            image: images[randomIntFromInterval(0, 19)],
+          },
+        ]}
+        buttons={[
+          { to: "/", text: "Learn more" },
+          { to: "/", text: "Learn morer" },
+        ]}
+      />
     </Layout>
   );
 }

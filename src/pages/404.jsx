@@ -1,16 +1,17 @@
-import * as React from "react";
+import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout/Layout";
 import Hero from "../components/Hero/Hero";
 
 export default function NotFoundPage({ data, location }) {
   const image = data.allUnsplashImage.edges[0].node;
+
   return (
     <Layout
       seoInfo={{
         title: "404 - Page not found",
         description: "My bad.",
-        href: location.href,
+        location,
       }}
     >
       <Hero
