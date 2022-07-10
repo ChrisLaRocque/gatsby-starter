@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 
 export default function SEO({ description, title, location, image }) {
   const { href, origin } = location;
-  const fallbackImage = `${origin}/meta.jpg`;
+  const metaImage = image || `${origin}/meta.jpg`;
 
   return (
     <Helmet
@@ -31,7 +31,7 @@ export default function SEO({ description, title, location, image }) {
         },
         {
           property: `og:image`,
-          content: image,
+          content: metaImage,
         },
         {
           property: `og:type`,
@@ -51,7 +51,7 @@ export default function SEO({ description, title, location, image }) {
         },
         {
           name: `twitter:image`,
-          content: image,
+          content: metaImage,
         },
         {
           name: `twitter:description`,
@@ -71,9 +71,12 @@ export default function SEO({ description, title, location, image }) {
 SEO.propTypes = {
   description: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  location: PropTypes.shape({}).isRequired,
-  image: PropTypes.shape({}),
+  location: PropTypes.shape({
+    href: PropTypes.string.isRequired,
+    origin: PropTypes.string.isRequired,
+  }).isRequired,
+  image: PropTypes.string,
 };
 SEO.defaultProps = {
-  image: null,
+  image: "",
 };

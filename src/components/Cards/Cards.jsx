@@ -13,13 +13,12 @@ export default function Cards({ headline, body, buttons, cards }) {
         {buttons && buttons.map((button, i) => <Button key={i} {...button} />)}
       </div>
       <div className="cards">
-        {cards.map((card) => (
-          <div className="card">
+        {cards.map((card, i) => (
+          <div className="card" key={i}>
             <div className="card-image">
               <GatsbyImage
                 image={card.image.gatsbyImageData}
                 alt={card.image.alt_description || card.image.description}
-                height={200}
               />
             </div>
             <div className="card-text">

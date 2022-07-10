@@ -4,21 +4,14 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-    'prettier',
-  ],
+  extends: ["plugin:react/recommended", "airbnb", "prettier"],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 'latest',
-    sourceType: 'module',
+    ecmaVersion: "latest",
+    sourceType: "module",
   },
-  plugins: [
-    'react',
-  ],
-  rules: {
-  },
+  plugins: ["react", "jsx-ally"],
+  rules: {},
 };

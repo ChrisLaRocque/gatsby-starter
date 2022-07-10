@@ -24,6 +24,7 @@ export default function IndexPage({ data, location }) {
         description: "Gatsby starter with things working how I like.",
         image: heroImage.urls.regular,
       }}
+      scrollProgress
     >
       <Hero
         headline="Gatsby starter"
